@@ -15,9 +15,11 @@
     <ClInclude Include="Hazel\src\Hazel\Application.h" />
     <ClInclude Include="Hazel\src\Hazel\Core.h" />
     <ClInclude Include="Hazel\src\Hazel\EntryPoint.h" />
+    <ClInclude Include="Hazel\src\Hazel\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Hazel\src\Hazel\Application.cpp" />
+    <ClCompile Include="Hazel\src\Hazel\Log.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -68,6 +70,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>HZ_PLATFORM_WINDOWS;HZ_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Hazel\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,6 +85,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>HZ_PLATFORM_WINDOWS;HZ_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Hazel\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

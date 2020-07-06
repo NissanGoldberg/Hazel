@@ -30,9 +30,15 @@
     <ClInclude Include="Hazel\src\Hazel\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Hazel\src\Hazel\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Hazel\src\Hazel\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hazel\src\Hazel\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
