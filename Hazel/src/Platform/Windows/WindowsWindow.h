@@ -19,7 +19,6 @@ namespace Hazel {
 		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
-		Window* WindowsWindow::Create(const WindowProps& props);
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();

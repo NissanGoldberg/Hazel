@@ -7,7 +7,7 @@ namespace Hazel {
 
 	static bool s_GLFWInitialized = false;
 
-	Window* WindowsWindow::Create(const WindowProps& props){
+	Window* Window::Create(const WindowProps& props){
 		return new WindowsWindow(props);
 	}
 
