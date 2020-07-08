@@ -2,10 +2,12 @@
 #include "Core.h"
 
 #include "Hazel/Events/ApplicationEvent.h"
-#include "Hazel/Events/Event.h"//<-- Added this vid 13
-#include "Hazel/LayerStack.h"  //<-- Added this vid 13
+#include "Hazel/Events/Event.h"
+#include "Hazel/LayerStack.h"  
 #include "Window.h"
 
+//#include <GLFW/glfw3.h> //<-- Added this vid 14
+						
 namespace Hazel {
 
 	class HAZEL_API Application {

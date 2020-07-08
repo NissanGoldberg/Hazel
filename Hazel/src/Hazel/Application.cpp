@@ -1,8 +1,9 @@
 #include "hzpch.h"
 
 #include "Application.h"
-#include <GLFW/glfw3.h>
 #include "Hazel/Log.h"
+
+#include <glad/glad.h>
 
 
 namespace Hazel {
@@ -45,6 +46,7 @@ namespace Hazel {
 			if (e.Handled)
 				break;
 		}
+
 	}
 
 	//Changed in vid 13
