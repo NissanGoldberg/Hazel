@@ -43,9 +43,11 @@ namespace Hazel {
 	class HAZEL_API Event{
 		friend class EventDispatcher;
 	protected:
-		bool Handled = false; //Check if event was handled or not
-		//Ex. Mouse click event falls in boundary we want to consume and thats it
+
 	public:
+		bool Handled = false; //Check if event was handled or not
+//Ex. Mouse click event falls in boundary we want to consume and thats it
+
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0; //Only for debugging, is overhead
 		virtual int GetCategoryFlags() const = 0;
