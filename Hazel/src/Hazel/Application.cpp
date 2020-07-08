@@ -10,10 +10,14 @@ namespace Hazel {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
+	Application* Application::s_Instance = nullptr;//<-- Added vid 15
+
 	Application::Application() {
+		HZ_CORE_ASSERT(!s_Instance, "Application already exists!"); //<-- Added vid 15
+		s_Instance = this; //<-- Added vid 15
+
 		m_Window = std::unique_ptr<Window>(Window::Create());
 
-		//Added in vid 12
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 		// macro for std::bind(&Application::OnEvent, this, std::placeholders::_1
 	}
@@ -21,17 +25,16 @@ namespace Hazel {
 	Application::~Application() {
 	}
 
-	//Added in vid 13
 	void Application::PushLayer(Layer* layer) {
 		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
 	}
 
-	//Added in vid 13
 	void Application::PushOverlay(Layer* layer) {
 		m_LayerStack.PushOverlay(layer);
+		layer->OnAttach();
 	}
 
-	//Changed in vid 13
 	void Application::OnEvent(Event& e) {
 		EventDispatcher dispatcher(e);
 
@@ -39,7 +42,6 @@ namespace Hazel {
 
 		HZ_CORE_TRACE("{0}", e); //macro in Log.h , for debugging
 
-		//Added in vid 13
 		//Iterate backwards
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); ) {
 			(*--it)->OnEvent(e);
@@ -49,7 +51,6 @@ namespace Hazel {
 
 	}
 
-	//Changed in vid 13
 	void Application::Run() {
 
 		while (m_Running) {
@@ -64,7 +65,6 @@ namespace Hazel {
 
 	}
 
-	// Added in vid 12
 	bool Application::OnWindowClose(WindowCloseEvent& e) {
 		m_Running = false;
 		return true;
