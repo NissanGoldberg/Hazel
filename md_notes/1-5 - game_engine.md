@@ -1,7 +1,5 @@
 [Handmadehero](https://www.youtube.com/user/handmadeheroarchive/playlists)
 
-10 videos a day
-
 ### Game Engine
 
 A data transformation machine. Here we will implement these features
