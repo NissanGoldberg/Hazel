@@ -9,9 +9,9 @@
 * EventListenerInterface and window can have an array of I_event_listerner and iterate through them.
 * Event Dispatcher
 
-![](C:\Users\nissa\OneDrive\Desktop\Coding\CPP\Game Engine\8 - Planning the Event System.png)
+![](https://github.com/NissanGoldberg/Hazel/blob/master/md_notes/8%20-%20Planning%20the%20Event%20System.png)
 
-![](C:\Users\nissa\OneDrive\Desktop\Coding\CPP\Game Engine\8 - Planning the Event System-2.png)
+![](https://github.com/NissanGoldberg/Hazel/blob/master/md_notes/8%20-%20Planning%20the%20Event%20System-2.png)
 
  
 
