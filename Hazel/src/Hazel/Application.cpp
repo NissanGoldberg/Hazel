@@ -19,7 +19,7 @@ namespace Hazel {
 		m_Window = std::unique_ptr<Window>(Window::Create());
 
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
-		// macro for std::bind(&Application::OnEvent, this, std::placeholders::_1
+		// macro for std::bind(&Application::OnEvent, this, std::placeholders::_1)
 	}
 
 	Application::~Application() {

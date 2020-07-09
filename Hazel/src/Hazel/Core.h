@@ -20,3 +20,6 @@
 #endif // HZ_ENABLE_ASSERTS
 
 #define BIT(x) (1 << x)
+
+//Add this in vid 16
+#define HZ_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
