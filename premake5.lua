@@ -59,6 +59,7 @@ project "Hazel"
 		defines {
 			"HZ_PLATFORM_WINDOWS",
 			"HZ_BUILD_DLL",
+			"HZ_DEBUG",
 			"GLFW_INCLUDE_NONE"
 		}
 		

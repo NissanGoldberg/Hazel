@@ -5,6 +5,7 @@
 #include "Hazel/Events/ApplicationEvent.h"
 #include "Hazel/Events/MouseEvent.h"
 #include "Hazel/Events/KeyEvent.h"
+#include "Hazel/Log.h"
 
 #include <glad/glad.h>
 

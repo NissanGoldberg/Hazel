@@ -38,6 +38,10 @@ namespace Hazel {
 		virtual void SetVSync(bool enabled) = 0;
 		virtual bool IsVSync() const = 0;
 
+		//This return void* because maybe in the future we may not
+		//want to return a GLFW window
+		virtual void* GetNativeWindow() const = 0;
+
 		//Create has to implemented per platform
 		static Window* Create(const WindowProps& props = WindowProps());
 	};
