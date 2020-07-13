@@ -14,6 +14,7 @@ namespace Hazel {
 		virtual void OnAttach() {} //When adding to the layer stack, we attach it
 		virtual void OnDetach() {}
 		virtual void OnUpdate() {} //Get called when the App updates
+		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 
 		const std::string& GetName() const { return m_DebugName; }

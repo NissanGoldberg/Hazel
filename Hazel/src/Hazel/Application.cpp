@@ -21,6 +21,8 @@ namespace Hazel {
 
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 		// macro for std::bind(&Application::OnEvent, this, std::placeholders::_1)
+		m_ImGuiLayer = new ImGuiLayer();
+		PushOverlay(m_ImGuiLayer);
 	}
 
 	Application::~Application() {
@@ -60,6 +62,12 @@ namespace Hazel {
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+
+			//Added in vid22
+			m_ImGuiLayer->Begin();
+			for (Layer* layer : m_LayerStack)
+				layer->OnImGuiRender();
+			m_ImGuiLayer->End();
 
 			m_Window->OnUpdate();
 		}
