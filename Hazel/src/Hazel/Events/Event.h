@@ -33,6 +33,8 @@ namespace Hazel {
 		EventCategoryMouseButton = BIT(4)
 	};
 
+//`##` is used to concatenate whatever is before the `##` with whatever is after it.
+// https://en.cppreference.com/w/cpp/preprocessor/replace
 #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
 								virtual EventType GetEventType() const override { return GetStaticType(); }\
 								virtual const char* GetName() const override { return #type; }
@@ -66,6 +68,8 @@ namespace Hazel {
 
 
 	class EventDispatcher{
+		//std::function that returns bool and takes T&
+		//ex. of T is WindowResizeEvent
 		template<typename T>
 		using EventFn = std::function<bool(T&)>;
 	public:

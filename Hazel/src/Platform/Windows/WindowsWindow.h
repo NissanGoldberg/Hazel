@@ -29,7 +29,7 @@ namespace Hazel {
 
 		//This struct is to pass into GLFW and not the entire class
 		//This is where we store data before callbacks
-		struct WindowData{
+		struct WindowData {
 			std::string Title;
 			unsigned int Width, Height;
 			bool VSync;

@@ -10,7 +10,8 @@ namespace Hazel {
 	std::shared_ptr<spdlog::logger> Log::s_ClientLogger;
 
 	void Log::Init() {
-		//gives color, timestamp, look at the wiki
+		//%^-start color, %T- timestamp, %v - actual text to log, %$ - end of color
+		//https://github.com/gabime/spdlog/wiki/3.-Custom-formatting
 		spdlog::set_pattern("%^[%T] %n: %v%$");
 
 		s_CoreLogger = spdlog::stdout_color_mt("HAZEL");

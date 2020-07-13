@@ -31,6 +31,6 @@ namespace Hazel {
 		static Application* s_Instance; //<-- Added this vid 15, SINGLETON
 	};
 
-	//To be defined in client
+	//To be defined in client, in our code is defined in SandboxApp
 	Application* CreateApplication();
 }
