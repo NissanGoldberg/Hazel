@@ -29,7 +29,9 @@ namespace Hazel {
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
-		LayerStack m_LayerStack;     
+		LayerStack m_LayerStack;  
+
+		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
 	private:
 		static Application* s_Instance; //<-- Added this vid 15, SINGLETON
 	};
